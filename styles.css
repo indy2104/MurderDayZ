@@ -15,6 +15,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -27,7 +28,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
 }
 
@@ -37,10 +38,11 @@ nav ul {
     display: flex;
     justify-content: center;
     margin: 1rem 0 0 0;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    margin: 0 1rem;
+    margin: 0.5rem 1rem;
 }
 
 nav ul li a {
@@ -77,13 +79,13 @@ nav ul li a:hover {
 
 .hero h2 {
     position: relative;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .hero p {
     position: relative;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .discord-invite {
@@ -94,6 +96,7 @@ nav ul li a:hover {
 .discord-invite a {
     display: flex;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
     background: #7289da;
     color: #fff;
@@ -120,11 +123,12 @@ main {
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    width: 100%;
 }
 
 section {
     width: 100%;
-    max-width: 1000px;
+    max-width: 800px;
     padding: 2rem;
     margin: 2rem auto;
     background: #333;
@@ -136,7 +140,7 @@ section {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
     border-bottom: 2px solid #444;
     padding-bottom: 0.5rem;
@@ -144,7 +148,7 @@ h2 {
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.6;
 }
 
@@ -152,7 +156,7 @@ ul {
     list-style: none;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1rem;
 }
 
@@ -209,6 +213,33 @@ footer {
     position: relative;
     width: 100%;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    nav ul {
+        justify-content: center;
+    }
+
+    ul {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .hero h2 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
 }
 
 /* Animations */
