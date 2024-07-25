@@ -166,11 +166,23 @@ ul li {
     padding: 1rem;
     border-radius: 4px;
     transition: background 0.3s, transform 0.3s;
+    text-align: center;
 }
 
 ul li:hover {
-    background: #555;
+    background: #444;
     transform: scale(1.05);
+}
+
+.button-link {
+    display: inline-block;
+    background-color: #444;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    transition: background 0.3s, transform 0.3s;
+    text-align: center;
 }
 
 form {
